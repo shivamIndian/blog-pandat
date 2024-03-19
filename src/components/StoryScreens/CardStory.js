@@ -34,10 +34,7 @@ const Story = ({ story }) => {
 
   return (
     <div className="story-card">
-      <Link
-        to={`https://blog-pandat.vercel.app//story/${story.slug}`}
-        className="story-link"
-      >
+      <Link to={`/story/${story.slug}`} className="story-link">
         <img
           className=" story-image"
           src={`https://blog-backend-iwq9.onrender.com/storyImages/${story.image}`}
