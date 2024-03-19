@@ -35,7 +35,7 @@ const Story = ({ story }) => {
   return (
     <div className="story-card">
       <Link
-        to={`https://haridwar.netlify.app/story/${story.slug}`}
+        to={`https://blog-pandat.vercel.app//story/${story.slug}`}
         className="story-link"
       >
         <img
