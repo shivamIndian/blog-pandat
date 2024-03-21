@@ -9,7 +9,6 @@ import { FiEdit, FiArrowLeft } from "react-icons/fi";
 import { FaRegComment } from "react-icons/fa";
 import { BsBookmarkPlus, BsThreeDots, BsBookmarkFill } from "react-icons/bs";
 import CommentSidebar from "../CommentScreens/CommentSidebar";
-import ShareButtons from "../GeneralScreens/ShareButtons";
 
 const DetailStory = () => {
   const [likeStatus, setLikeStatus] = useState(false);
@@ -25,7 +24,6 @@ const DetailStory = () => {
   const api = axios.create({
     baseURL: "https://blog-sfeu.onrender.com/",
   });
-  const currentUrl = window.location.href;
   useEffect(() => {
     const getDetailStory = async () => {
       setLoading(true);
@@ -45,7 +43,7 @@ const DetailStory = () => {
       }
 
       try {
-        const { data } = await axios.post(`/story/${slug}`, { activeUser });
+        const { data } = await api.post(`/story/${slug}`, { activeUser });
         setStory(data.data);
         setLikeStatus(data.likeStatus);
         setLikeCount(data.data.likeCount);
@@ -98,7 +96,7 @@ const DetailStory = () => {
   const handleDelete = async () => {
     if (window.confirm("Do you want to delete this post")) {
       try {
-        await axios.delete(`/story/${slug}/delete`, {
+        await api.delete(`/story/${slug}/delete`, {
           headers: {
             "Content-Type": "application/json",
             authorization: `Bearer ${localStorage.getItem("authToken")}`,
@@ -160,7 +158,7 @@ const DetailStory = () => {
                   {story.author && (
                     <li className="story-author-info">
                       <img
-                        src={`/userPhotos/${story.author.photo}`}
+                        src={`https://blog-sfeu.onrender.com/userPhotos/${story.author.photo}`}
                         alt={story.author.username}
                       />
                       <span className="story-author-username">
@@ -174,9 +172,6 @@ const DetailStory = () => {
                   <b>-</b>
 
                   <li className="story-readtime">{story.readtime} min read</li>
-                  <li className="story-readtime">
-                    <ShareButtons url={currentUrl} title="blog" />
-                  </li>
                 </ul>
 
                 {!activeUser.username && (
@@ -222,7 +217,10 @@ const DetailStory = () => {
 
             <div className="story-content">
               <div className="story-banner-img">
-                <img src={`/storyImages/${story.image}`} alt={story.title} />
+                <img
+                  src={`https://blog-sfeu.onrender.com/storyImages/${story.image}`}
+                  alt={story.title}
+                />
               </div>
 
               <div
@@ -237,7 +235,7 @@ const DetailStory = () => {
                   <li>
                     <i onClick={handleLike}>
                       {likeStatus ? (
-                        <FaHeart color="#ffa500" />
+                        <FaHeart color="#ffa500	" />
                       ) : (
                         <FaRegHeart />
                       )}
@@ -247,7 +245,7 @@ const DetailStory = () => {
                       className="likecount"
                       style={
                         likeStatus
-                          ? { color: "#ffa500" }
+                          ? { color: "#ffa500	" }
                           : { color: "rgb(99, 99, 99)" }
                       }
                     >
@@ -273,7 +271,7 @@ const DetailStory = () => {
                   <li>
                     <i onClick={addStoryToReadList}>
                       {storyReadListStatus ? (
-                        <BsBookmarkFill color="#0205b1" />
+                        <BsBookmarkFill color="#ffa500" />
                       ) : (
                         <BsBookmarkPlus />
                       )}
