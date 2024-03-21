@@ -19,7 +19,7 @@ const AddStory = () => {
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
   const api = axios.create({
-    baseURL: "https://blog-backend-iwq9.onrender.com/",
+    baseURL: "https://blog-sfeu.onrender.com/",
   });
   const clearInputs = () => {
     setTitle("");

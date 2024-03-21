@@ -11,7 +11,7 @@ const ResetPasswordScreen = () => {
   const search = useLocation().search;
   const token = search.split("=")[1];
   const api = axios.create({
-    baseURL: "https://blog-backend-iwq9.onrender.com/",
+    baseURL: "https://blog-sfeu.onrender.com/",
   });
   const resetPasswordHandler = async (e) => {
     e.preventDefault();

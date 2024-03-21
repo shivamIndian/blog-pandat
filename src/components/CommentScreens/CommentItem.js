@@ -10,7 +10,7 @@ const CommentItem = ({ comment, activeUser }) => {
   const [likeCount, setLikeCount] = useState(comment.likeCount);
   const [likeStatus, setLikeStatus] = useState(false);
   const api = axios.create({
-    baseURL: "https://blog-backend-iwq9.onrender.com/",
+    baseURL: "https://blog-sfeu.onrender.com/",
   });
   useEffect(() => {
     const getCommentLikeStatus = async () => {

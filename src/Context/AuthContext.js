@@ -12,7 +12,7 @@ const AuthContextProvider = (props) => {
     },
   });
   const api = axios.create({
-    baseURL: "https://blog-backend-iwq9.onrender.com/",
+    baseURL: "https://blog-sfeu.onrender.com/",
   });
 
   useEffect(() => {

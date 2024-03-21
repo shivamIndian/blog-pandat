@@ -8,7 +8,7 @@ const ForgotPasswordScreen = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const api = axios.create({
-    baseURL: "https://blog-backend-iwq9.onrender.com/",
+    baseURL: "https://blog-sfeu.onrender.com/",
   });
   const forgotPasswordHandler = async (e) => {
     e.preventDefault();

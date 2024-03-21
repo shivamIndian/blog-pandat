@@ -10,7 +10,7 @@ const RegisterScreen = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const api = axios.create({
-    baseURL: "https://blog-backend-iwq9.onrender.com/",
+    baseURL: "https://blog-sfeu.onrender.com/",
   });
   const registerHandler = async (e) => {
     e.preventDefault();

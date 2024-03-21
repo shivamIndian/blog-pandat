@@ -51,7 +51,7 @@ const Header = () => {
                   <SkeletonElement type="minsize-avatar" />
                 ) : (
                   <img
-                    src={`https://blog-backend-iwq9.onrender.com/userPhotos/${activeUser.photo}`}
+                    src={`https://blog-sfeu.onrender.com/userPhotos/${activeUser.photo}`}
                     alt={activeUser.username}
                   />
                 )}

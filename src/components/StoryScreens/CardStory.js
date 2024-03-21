@@ -37,7 +37,7 @@ const Story = ({ story }) => {
       <Link to={`/story/${story.slug}`} className="story-link">
         <img
           className=" story-image"
-          src={`https://blog-backend-iwq9.onrender.com/storyImages/${story.image}`}
+          src={`https://blog-sfeu.onrender.com/storyImages/${story.image}`}
           alt={story.title}
         />
         <div className="story-content-wrapper">

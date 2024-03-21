@@ -11,7 +11,7 @@ const Profile = () => {
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(true);
   const api = axios.create({
-    baseURL: "https://blog-backend-iwq9.onrender.com/",
+    baseURL: "https://blog-sfeu.onrender.com/",
   });
   const editDate = (createdAt) => {
     const monthNames = [

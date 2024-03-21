@@ -19,7 +19,7 @@ const CommentSidebar = ({
   }, [setCommentList]);
 
   const api = axios.create({
-    baseURL: "https://blog-backend-iwq9.onrender.com/",
+    baseURL: "https://blog-sfeu.onrender.com/",
   });
   const getStoryComments = async () => {
     try {
